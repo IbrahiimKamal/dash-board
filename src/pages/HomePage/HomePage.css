@@ -1,13 +1,5 @@
-.desktop-hide-show {
-  display: none;
-}
-
 @media screen and (min-width: 992px) {
-  .show-hide-mobile {
-    display: none;
-  }
-
-  .desktop-hide-show {
+  .desktop-grid {
     display: grid;
     grid-template-columns: 1fr 20fr;
   }

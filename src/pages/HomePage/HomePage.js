@@ -1,4 +1,5 @@
 import { AiOutlinePlus } from 'react-icons/ai';
+import { useMediaQuery } from 'react-responsive';
 
 import DesktopNavbar from '../../components/Navbar/DesktopNavbar/DesktopNavbar';
 import BreadCrumb from '../../components/BreadCrumb/BreadCrumb';
@@ -15,57 +16,65 @@ import Sidebar from '../../components/Sidebar/Sidebar';
 import './HomePage.css';
 
 const HomePage = () => {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-width: 1224px)',
+  });
+
   return (
     <>
-      <div className="show-hide-mobile">
-        <MobileNav />
-        <div className="container">
-          <div className="crumb-box-container">
-            <Box icon={<AiOutlinePlus />} text="request price" />
-            <Box text="import" className="box-item mx-3" />
-          </div>
-
-          <div className="mt-3">
-            <MobileSearchFilter />
-          </div>
-
-          <div
-            style={{
-              minHeight: '100vh',
-            }}
-          >
-            <div className="my-3">
-              <Card />
-            </div>
-            <div>
-              <Card />
-            </div>
-          </div>
-        </div>
-        <BottomNav />
-      </div>
-
-      <div className="desktop-hide-show">
+      {!isDesktopOrLaptop && (
         <div>
-          <Sidebar />
-        </div>
+          <MobileNav />
+          <div className="container">
+            <div className="crumb-box-container">
+              <Box icon={<AiOutlinePlus />} text="request price" />
+              <Box text="import" className="box-item mx-3" />
+            </div>
 
-        <div className="px-3">
-          <div className="mb-2">
-            <DesktopNavbar />
+            <div className="mt-3">
+              <MobileSearchFilter />
+            </div>
+
+            <div
+              style={{
+                minHeight: '100vh',
+              }}
+            >
+              <div className="my-3">
+                <Card />
+              </div>
+              <div>
+                <Card />
+              </div>
+            </div>
           </div>
-          <div className="mb-4">
-            <BreadCrumb />
-          </div>
-          <div className="mb-3">
-            <SearchFilters />
-          </div>
-          <DashTables />
+          <BottomNav />
+        </div>
+      )}
+
+      {isDesktopOrLaptop && (
+        <div className="desktop-grid">
           <div>
-            <Paginations />
+            <Sidebar />
+          </div>
+
+          <div className="px-3">
+            <div className="mb-2">
+              <DesktopNavbar />
+            </div>
+            <div className="mb-4">
+              <BreadCrumb />
+            </div>
+            <div className="mb-3">
+              <SearchFilters />
+            </div>
+            <DashTables />
+            <div>
+              <Paginations />
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </>
   );
 };
