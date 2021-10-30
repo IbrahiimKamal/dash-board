@@ -1,0 +1,18 @@
+.navbar {
+  padding: 1rem 0;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-toggle-icon {
+  margin-right: 10px;
+}

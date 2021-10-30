@@ -1,0 +1,25 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  background: #fff;
+  z-index: 33;
+}
+
+.bottom-nav-container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+}
+
+.bottom-nav-toggle {
+  margin-top: 5px;
+}
+
+.bottom-nav-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
