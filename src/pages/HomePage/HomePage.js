@@ -17,7 +17,7 @@ import './HomePage.css';
 
 const HomePage = () => {
   const isDesktopOrLaptop = useMediaQuery({
-    query: '(min-width: 1224px)',
+    query: '(min-width: 992px)',
   });
 
   return (
