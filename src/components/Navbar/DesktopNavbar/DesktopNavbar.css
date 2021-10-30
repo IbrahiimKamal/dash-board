@@ -1,0 +1,12 @@
+.rs-navbar {
+  background: #fff;
+}
+
+.active-menu {
+  border-top: 3px solid #fff;
+}
+
+.active-menu-border {
+  border-top: 3px solid #d75e43;
+  color: #d75e43;
+}

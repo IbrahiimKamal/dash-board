@@ -1,0 +1,17 @@
+.box {
+  display: flex;
+  align-items: center;
+  background: #ea421e;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.box-icon {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.box-text {
+  text-transform: capitalize;
+}

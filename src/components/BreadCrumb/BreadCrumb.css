@@ -1,0 +1,11 @@
+.crumb-box-container {
+  display: flex;
+}
+
+.box-item {
+  margin-right: 10px;
+  background: #fff;
+  color: #868789;
+  border: 1px solid #868789;
+  font-weight: 500;
+}

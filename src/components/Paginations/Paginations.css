@@ -1,0 +1,19 @@
+.paginations {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.rs-pagination-btn-active {
+  background: #d75e43 !important;
+  color: #fff !important;
+  border: 1px solid #d75e43 !important;
+  border-radius: 50%;
+}
+
+.rs-pagination-symbol {
+  font-weight: 500;
+  font-size: 16px;
+}
